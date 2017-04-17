@@ -36,11 +36,11 @@ empty = return ()
 -- | Build an attribute value pair. This lets you write neater-looking
 -- elements:
 -- @
--- img ["src" =: "./logo.png", "alt" =: "Our lovely logo."] empty
+-- img ["src" ==: "./logo.png", "alt" ==: "Our lovely logo."] empty
 --   -- <img src="./logo.png" alt = "Our lovely logo."></img>
 -- @
-(=:) :: Text -> Text -> Attr
-attr =: value = (attr, value)
+(==:) :: Text -> Text -> Attr
+attr ==: value = (attr, value)
 
 -- | Adds the "enabled" attribute and removes the "disabled" attribute
 -- (if present).

@@ -12,5 +12,5 @@ columns attrs = div' (addClass "columns" attrs)
 column :: Dom.DomBuilder t m => Attrs -> m a -> m a
 column attrs = div' (addClass "column" attrs)
 
-col :: Dom.DomBuilder t m => m a -> m a
-col = div' ["class" =: "column"]
+column' :: Dom.DomBuilder t m => m a -> m a
+column' = div' ["class" ==: "column"]
