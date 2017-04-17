@@ -149,6 +149,14 @@ h5 = Dom.elAttr "h5"
 h6 :: Dom.DomBuilder t m => Attrs -> m a -> m a
 h6 = Dom.elAttr "h6"
 
+h1',h2',h3',h4',h5',h6' :: Dom.DomBuilder t m => Text -> m ()
+h1' = h1 mempty . Dom.text
+h2' = h2 mempty . Dom.text
+h3' = h3 mempty . Dom.text
+h4' = h4 mempty . Dom.text
+h5' = h5 mempty . Dom.text
+h6' = h6 mempty . Dom.text
+
 -- ** Text Content
 
 dd :: Dom.DomBuilder t m => Attrs -> m a -> m a
@@ -171,6 +179,9 @@ figure = Dom.elAttr "figure"
 
 hr :: Dom.DomBuilder t m => Attrs -> m a -> m a
 hr = Dom.elAttr "hr"
+
+hr' :: Dom.DomBuilder t m => m ()
+hr' = Dom.elAttr "hr" mempty Dom.blank
 
 li :: Dom.DomBuilder t m => Attrs -> m a -> m a
 li = Dom.elAttr "li"
