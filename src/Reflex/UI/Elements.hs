@@ -88,8 +88,8 @@ removeClass name attrs = attrs & at "class" . _Just %~ remove
 base :: Dom.DomBuilder t m => Attrs -> m a -> m a
 base = Dom.elAttr "base"
 
-head :: Dom.DomBuilder t m => Attrs -> m a -> m a
-head = Dom.elAttr "head"
+head' :: Dom.DomBuilder t m => Attrs -> m a -> m a
+head' = Dom.elAttr "head"
 
 link :: Dom.DomBuilder t m => Attrs -> m a -> m a
 link = Dom.elAttr "link"
